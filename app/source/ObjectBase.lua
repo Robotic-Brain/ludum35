@@ -8,14 +8,13 @@ function Object:new (o)
 end
 
 function Object.instanceof(subject, super)
-    -- modiefied version of:
-    -- https://gist.github.com/paulcuth/1270733
-    super = super
+    -- from https://gist.github.com/paulcuth/1270733
+    super = tostring(super)
     local mt = getmetatable(subject)
 
     while true do
         if mt == nil then return false end
-        if mt == super then return true end
+        if tostring(mt) == super then return true end
 
         mt = getmetatable(mt)
     end

@@ -9,7 +9,7 @@ of compontents
 ]]--
 
 
-ComponentManager = Object:new()
+ComponentManager = Object:new{components={}}
 
 -- Adds component to end of internal list
 function ComponentManager:add(component)
@@ -21,12 +21,12 @@ function ComponentManager:add(component)
     end
     
     table.insert(self.components, component)
-    component.load()
+    component:onLoad()
 end
 
 -- Called each frame
 function ComponentManager:update(dt)
     for i,v in ipairs(self.components) do
-        v.onUpdate(dt)
+        v:onUpdate(dt)
     end
 end
