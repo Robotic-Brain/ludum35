@@ -2,6 +2,12 @@ require("ObjectBase")
 
 ComponentBase = Object:new()
 
-function ComponentBase:update(dt)
+-- Called on component add
+function ComponentBase:onLoad()
+    -- body
+end
+
+-- Called each frame
+function ComponentBase:onUpdate(dt)
     -- body
 end
