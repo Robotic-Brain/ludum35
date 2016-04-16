@@ -5,7 +5,7 @@ ComponentBase = subclass("ComponentBase", Object)
 
 -- Called on component add
 function ComponentBase:onLoad()
-    -- body
+    print("Loading component: "..tostring(self))
 end
 
 -- Called each frame
