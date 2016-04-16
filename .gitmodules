@@ -1,0 +1,3 @@
+[submodule "vendor/github/hashmal"]
+	path = vendor/github/hashmal
+	url = https://gist.github.com/874792.git
