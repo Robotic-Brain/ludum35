@@ -9,9 +9,12 @@ local components = {}
 function love.load()
     -- ## Component order
     -- input
-    -- logic
+    -- pre_phys_logic
     -- physics
+    -- post_phys_logic
     -- graphics
+    
+    require("testing.main")()
     
     print("Components: ")
     tprint(components)
@@ -19,7 +22,5 @@ function love.load()
 end
 
 function love.update(dt)
-    for i,v in ipairs(components) do
-        v.update(dt)
-    end
+    
 end
