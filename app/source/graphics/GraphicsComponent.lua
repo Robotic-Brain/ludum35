@@ -1,6 +1,6 @@
 require("ComponentBase")
 
-GraphicsComponent = ComponentBase:new()
+GraphicsComponent = subclass("GraphicsComponent", ComponentBase)
 
 function GraphicsComponent:draw()
 end

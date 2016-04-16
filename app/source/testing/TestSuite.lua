@@ -1,6 +1,6 @@
 require("ObjectBase")
 
-TestSuite = Object:new{tests={}}
+TestSuite = subclass("TestSuite", Object, {tests={}})
 
 function TestSuite:a(name)
     local t = require("testing.tests."..name)

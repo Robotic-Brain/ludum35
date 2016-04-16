@@ -9,7 +9,7 @@ of compontents
 ]]--
 
 
-ComponentManager = Object:new{components={}}
+ComponentManager = subclass("ComponentManager", Object, {components={}})
 
 -- Adds component to end of internal list
 function ComponentManager:add(component)

@@ -1,6 +1,7 @@
 require("ObjectBase")
 
-ComponentBase = Object:new()
+ComponentBase = subclass("ComponentBase", Object)
+
 
 -- Called on component add
 function ComponentBase:onLoad()

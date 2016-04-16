@@ -1,11 +1,11 @@
 require("testing.asserts")
 require("ObjectBase")
 
-local A = Object:new()
-local B = Object:new()
+local A = subclass("A", Object)
+local B = subclass("B", Object)
 
-local Asub = A:new()
-local Bsub = B:new()
+local Asub = subclass("Asub", A)
+local Bsub = subclass("Bsub", B)
 
 local iso = Object.instanceof
 local te = test.expect
