@@ -2,9 +2,19 @@ print(love.filesystem.getRequirePath())
 love.filesystem.setRequirePath("source/?.lua;source/?/init.lua")
 print(love.filesystem.getRequirePath())
 
+require("util.tprint")
+
 local components = {}
 
 function love.load()
+    -- ## Component order
+    -- input
+    -- logic
+    -- physics
+    -- graphics
+    
+    print("Components: ")
+    tprint(components)
     print("Setup complete...")
 end
 
